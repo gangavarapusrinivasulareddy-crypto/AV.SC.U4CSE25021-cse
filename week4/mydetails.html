@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Online Admission Form</title>
+</head>
+
+<body bgcolor="#e6f2ff">
+
+    <h2 align="center">COLLEGE ONLINE ADMISSION FORM</h2>
+
+    <form>
+        <table border="2" align="center" cellpadding="8" cellspacing="0" width="70%" bgcolor="#ffffff">
+            
+            <tr>
+                <td colspan="2" align="center"><b>Student Personal Details</b></td>
+            </tr>
+
+            <tr>
+                <td><label for="fname">First Name:</label></td>
+                <td><input type="text" id="fname" name="fname"></td>
+            </tr>
+
+            <tr>
+                <td><label for="lname">Last Name:</label></td>
+                <td><input type="text" id="lname" name="lname"></td>
+            </tr>
+
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td><input type="date" id="dob" name="dob"></td>
+            </tr>
+
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <input type="radio" name="gender"> Male
+                    <input type="radio" name="gender"> Female
+                    <input type="radio" name="gender"> other
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email ID:</label></td>
+                <td><input type="email" id="email" name="email"></td>
+            </tr>
+
+            <tr>
+                <td><label for="phone">Mobile Number:</label></td>
+                <td><input type="tel" id="phone" name="phone"></td>
+            </tr>
+
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td><textarea id="address" name="address" rows="4" cols="30"></textarea></td>
+            </tr>
+
+            <tr>
+                <td><label for="course">Course Applying For:</label></td>
+                <td>
+                    <select id="course" name="course">
+                        <option>B.Tech</option>
+                        <option>B.Sc</option>
+                        <option>B.Com</option>
+                        <option>BCA</option>
+                        <option>MCA</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="marks">12th Marks (%):</label></td>
+                <td><input type="number" id="marks" name="marks"></td>
+            </tr>
+
+            <tr>
+                <td><label>Hobbies:</label></td>
+                <td>
+                    <input type="checkbox"> Reading
+                    <input type="checkbox"> Sports
+                    <input type="checkbox"> Music
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="photo">Upload Photo:</label></td>
+                <td><input type="file" id="photo" name="photo"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                     <button type="button" onclick="alert('Submitted successfully')">
+                        Submit
+                        </button>
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+</body>
+</html>

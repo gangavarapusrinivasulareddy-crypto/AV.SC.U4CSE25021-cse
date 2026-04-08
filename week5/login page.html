@@ -1,0 +1,248 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Amrita Vishwa Vidyapeetham</title> 
+ 
+    <style> 
+   
+ 
+   
+ 
+        body{ 
+            margin:0; 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(to right, #4b0000, #800000, #5a0000); 
+        } 
+ 
+        .container{ 
+            width: 92%; 
+            margin: 30px auto; 
+            background: #ffffff; 
+            padding: 25px; 
+            border-radius: 15px; 
+            box-shadow: 0px 0px 25px rgba(0,0,0,0.4); 
+        } 
+ 
+        h1{ 
+            text-align: center; 
+            color: #800000; 
+            letter-spacing: 2px; 
+        } 
+ 
+        .campus-links{ 
+            text-align: center; 
+            margin: 20px 0; 
+   
+ 
+   
+ 
+        } 
+ 
+        .campus-links a{ 
+            text-decoration: none; 
+            margin: 0 12px; 
+            padding: 8px 18px; 
+            background: #800000; 
+            color: white; 
+            border-radius: 25px; 
+            font-size: 14px; 
+            transition: 0.3s; 
+        } 
+ 
+        .campus-links a:hover{ 
+            background: #d4af37; /* gold */ 
+            color: black; 
+        } 
+ 
+        .main{ 
+            display: flex; 
+            gap: 25px; 
+        } 
+ 
+        .login{ 
+   
+ 
+   
+ 
+            width: 30%; 
+            background: #f9f9f9; 
+            padding: 25px; 
+            border-radius: 15px; 
+            box-shadow: 0px 0px 12px rgba(0,0,0,0.2); 
+        } 
+ 
+        .login h3{ 
+            text-align: center; 
+            color: #800000; 
+        } 
+ 
+        .login input{ 
+            width: 100%; 
+            padding: 12px; 
+            margin: 15px 0; 
+            border-radius: 8px; 
+            border: 1px solid #aaa; 
+        } 
+ 
+        .login button{ 
+            width: 100%; 
+            padding: 12px; 
+            background: #d4af37;   /* gold button */ 
+   
+ 
+   
+ 
+            color: black; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-weight: bold; 
+            transition: 0.3s; 
+        } 
+ 
+        .login button:hover{ 
+            background: #800000; 
+            color: white; 
+        } 
+ 
+        .about{ 
+            width: 70%; 
+            background: #fafafa; 
+            padding: 25px; 
+            border-radius: 15px; 
+        } 
+ 
+        .campus-content{ 
+            display: none; 
+        } 
+ 
+   
+ 
+   
+ 
+        .campus-content:target{ 
+            display: block; 
+        } 
+ 
+        .campus-content img{ 
+            width: 100%; 
+            height: 260px; 
+            object-fit: cover; 
+            border-radius: 10px; 
+            margin-bottom: 15px; 
+        } 
+ 
+        h4{ 
+            color: #800000; 
+            margin-bottom: 10px; 
+        } 
+ 
+        p{ 
+            text-align: justify; 
+            line-height: 1.6; 
+        } 
+ 
+    </style> 
+</head> 
+ 
+<body> 
+ 
+<div class="container"> 
+ 
+    <h1>AMRITA VISHWA VIDYAPEETHAM</h1> 
+ 
+    <div class="campus-links"> 
+        <a href="#amaravati">Amaravati</a> 
+        <a href="#amritapuri">Amritapuri</a> 
+        <a href="#chennai">Chennai</a> 
+        <a href="#coimbatore">Coimbatore</a> 
+        <a href="#nagercoil">Nagercoil</a> 
+        <a href="#bangalore">Bangalore</a> 
+    </div> 
+ 
+    <div class="main"> 
+ 
+        <!-- Login Section --> 
+        <div class="login"> 
+            <h3>Student Login</h3> 
+            <input type="text" placeholder="Enter Username"> 
+            <input type="password" placeholder="Enter Password"> 
+            <button>Login</button> 
+   
+ 
+   
+ 
+        </div> 
+ 
+        <!-- Campus Details --> 
+        <div class="about"> 
+            <h3>Campus Information</h3> 
+ 
+            <div id="amaravati" class="campus-content"> 
+                <img src="https://webfiles.amrita.edu/2022/03/nbElb5oz-amrita-amaravati-campus-banner-2022.jpg" alt="Amaravati Campus"> 
+                <h4>Amaravati Campus</h4> 
+                <p> 
+                    The Amaravati campus offers modern infrastructure with advanced 
+labs, 
+                    innovation centers, and engineering programs. It emphasizes research, 
+                    technical excellence, and industry collaboration. 
+                </p> 
+            </div> 
+            <div id="amritapuri" class="campus-content"> 
+                <img src="https://webfiles.amrita.edu/2014/02/Div8nr6Q-amritapuri-campus.jpg" alt="Amritapuri Campus"> 
+                <h4>Amritapuri Campus</h4> 
+                <p>
+                    Located in Kerala near the Arabian Sea, this campus is known for 
+                    excellence in Engineering, Biotechnology, and Computer Science. 
+                    It promotes value-based education along with global research 
+exposure. 
+                </p> 
+
+            </div> 
+            <div id="chennai" class="campus-content"> 
+                <img src="https://webfiles.amrita.edu/2021/07/QZOUcnhk-mysore-campus.jpg" alt="Chennai Campus"> 
+                <h4>Chennai Campus</h4> 
+                <p> 
+                    The Chennai campus has strong industry collaboration and offers 
+                    various engineering programs. Students benefit from internships 
+                    and placements due to its proximity to major industries. 
+                </p> 
+            </div> 
+ 
+            <div id="coimbatore" class="campus-content"> 
+                <img src="https://webfiles.amrita.edu/2021/07/Z1qCGOsN-470-2.jpg" alt="Coimbatore Campus"> 
+                <h4>Coimbatore Campus</h4> 
+                <p> 
+                    Administrative headquarters located in Ettimadai. It houses 
+                    Schools of Engineering and Business with green surroundings, 
+                    advanced research labs, and excellent placement records. 
+                </p> 
+            </div> 
+            <div id="nagercoil" class="campus-content"> 
+                <img src="https://webfiles.amrita.edu/2020/12/sTwUegXx-amrita_univerty.jpg" alt="Nagercoil Campus"> 
+                <h4>Nagercoil Campus</h4> 
+                <p> 
+   
+ 
+   
+ 
+                    The Nagercoil campus focuses on arts, science, and foundational 
+                    programs. It provides a peaceful academic environment with 
+                    experienced faculty, modern classrooms, and strong academic 
+                    guidance for holistic development. 
+                </p> 
+            </div> 
+            <div id="bangalore" class="campus-content"> 
+                <img src="https://webfiles.amrita.edu/2021/07/0DHIicM5-New-Project.jpg" alt="Bangalore Campus"> 
+                <h4>Bangalore Campus</h4> 
+                <p> 
+                    Situated in India's technology hub, this campus focuses on 
+                    engineering, management, and technology programs with strong 
+                    placement opportunities and startup exposure. 
+                </p> 
+            </div> 
+        </div> 
+    </div> 
+</div> 
+</body> 
+</html>

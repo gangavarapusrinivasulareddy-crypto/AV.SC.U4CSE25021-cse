@@ -1,0 +1,362 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>E-Commerce</title>   
+ 
+<style> 
+ 
+body{ 
+margin:0; 
+font-family:Arial, sans-serif; 
+min-height:100vh; 
+display:flex; 
+flex-direction:column; 
+} 
+ 
+/* GRID LAYOUT */ 
+ 
+.container{ 
+display:grid; 
+grid-template-rows:auto auto 1fr; 
+grid-template-columns:200px 1fr; 
+ 
+grid-template-areas: 
+"header header" 
+"sale sale" 
+"sidebar products"; 
+   
+ 
+   
+ 
+ 
+gap:10px; 
+padding:10px; 
+flex:1; 
+} 
+ 
+/* HEADER */ 
+ 
+.header{ 
+grid-area:header; 
+background:#002366; 
+color:white; 
+text-align:center; 
+padding:15px; 
+} 
+ 
+/* SALE BAR */ 
+ 
+.sale{ 
+grid-area:sale; 
+background:orange; 
+   
+ 
+   
+ 
+text-align:center; 
+padding:10px; 
+font-weight:bold; 
+} 
+ 
+/* SIDEBAR */ 
+ 
+.sidebar{ 
+grid-area:sidebar; 
+background:#f4f4f4; 
+padding:15px; 
+} 
+ 
+.sidebar h3{ 
+text-align:center; 
+margin-bottom:15px; 
+} 
+ 
+.sidebar a{ 
+display:block; 
+background:#007bff; 
+   
+ 
+   
+ 
+color:white; 
+padding:10px; 
+margin:8px 0; 
+border-radius:5px; 
+text-decoration:none; 
+text-align:center; 
+} 
+ 
+.sidebar a:hover{ 
+background:#0056b3; 
+} 
+ 
+/* PRODUCTS */ 
+ 
+.products{ 
+grid-area:products; 
+} 
+ 
+.product-grid{ 
+display:none; 
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); 
+   
+ 
+   
+ 
+gap:15px; 
+} 
+ 
+.product-grid:target{ 
+display:grid; 
+} 
+ 
+/* CARD */ 
+ 
+.card{ 
+border:1px solid #ddd; 
+border-radius:8px; 
+padding:10px; 
+text-align:center; 
+background:white; 
+} 
+ 
+.card img{ 
+width:100%; 
+height:200px; 
+object-fit:cover; 
+   
+ 
+   
+ 
+border-radius:5px; 
+} 
+ 
+/* BUTTON */ 
+ 
+.card button{ 
+background:gold; 
+color:black; 
+border:none; 
+padding:8px 12px; 
+margin-top:8px; 
+border-radius:5px; 
+cursor:pointer; 
+} 
+ 
+.card button:active{ 
+background:black; 
+color:white; 
+} 
+ 
+/* FOOTER */ 
+   
+ 
+   
+ 
+ 
+.footer{ 
+background:#002366; 
+color:white; 
+text-align:center; 
+padding:12px; 
+margin-top:auto; 
+} 
+ 
+/* MOBILE */ 
+ 
+@media(max-width:768px){ 
+ 
+.container{ 
+grid-template-columns:1fr; 
+grid-template-areas: 
+"header" 
+"sale" 
+"sidebar" 
+"products"; 
+} 
+   
+ 
+   
+ 
+ 
+} 
+ 
+</style> 
+</head> 
+ 
+<body> 
+ 
+<div class="container"> 
+ 
+<div class="header"> 
+<h1>Sales Mart</h1> 
+</div> 
+ 
+<div class="sale"> 
+�
+� Big Sale Today – 40% to 50% Off 
+</div> 
+ 
+<div class="sidebar"> 
+<h3>Categories</h3> 
+<a href="#electronics">Electronics</a> 
+   
+ 
+   
+ 
+<a href="#clothing">Clothing</a> 
+<a href="#home">Home Appliances</a> 
+<a href="#books">Books</a> 
+</div> 
+ 
+<div class="products"> 
+ 
+<!-- ELECTRONICS --> 
+ 
+<div id="electronics" class="product-grid"> 
+ 
+<div class="card"> 
+<img src="https://m.media-amazon.com/images/I/71vFKBpKakL._SL1500_.jpg"> 
+<h3>Laptop</h3> 
+<p>₹75,000</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+<div class="card"> 
+<img src="https://image01-in.oneplus.net/media/202511/06/f96761005541e8715f92bda23561aa89.png?x-amz-process=image/format,webp/quality,Q_80"> 
+<h3>Smartphone</h3> 
+<p>₹35,000</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+<div class="card"> 
+<img src="https://m.media-amazon.com/images/I/61ZjlBOp+rL._SL1500_.jpg"> 
+<h3>Smart Watch</h3> 
+<p>₹8,000</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+<div class="card"> 
+<img src="https://uniquec.com/wp-content/uploads/Headset-500.png"> 
+<h3>Headphones</h3> 
+<p>₹2,500</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+</div>   
+ 
+<!-- CLOTHING --> 
+ 
+<div id="clothing" class="product-grid"> 
+ 
+<div class="card"> 
+<img src="https://m.media-amazon.com/images/I/71EKUMPRlxL._SY741_.jpg"> 
+<h3>T-Shirt</h3> 
+<p>₹400</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+<div class="card"> 
+<img src="https://nobero.com/cdn/shop/files/elsewhere_e48fa69c-aa9e-47ac-a0e4-3999719d9791.jpg?v=1760173822"> 
+<h3>Hoodie</h3> 
+<p>₹900</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+<div class="card"> 
+<img src="https://m.media-amazon.com/images/I/814DcduIuoL._SX569_.jpg"> 
+<h3>Jeans</h3> 
+<p>₹1200</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+<div class="card"> 
+<img src="https://m.media-amazon.com/images/I/61GtS6IrR7L._SX569_.jpg"> 
+<h3>Formal Shirt</h3> 
+<p>₹700</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+</div> 
+ 
+ 
+<!-- HOME --> 
+ 
+<div id="home" class="product-grid"> 
+ 
+<div class="card"> 
+<img src="https://jamesandco.in/wp-content/uploads/2024/09/167704-800-auto.jpg"> 
+<h3>Refrigerator</h3> 
+<p>₹45,000</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+<div class="card"> 
+<img src="https://www.voltasbeko.com/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/b/e/beko13212-final.jpg"> 
+<h3>Washing Machine</h3> 
+<p>₹28,000</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+<div class="card"> 
+<img src="https://myborosil.com/cdn/shop/files/BKE08_1.jpg"> 
+<h3>Electric Kettle</h3> 
+<p>₹1,500</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+<div class="card"> 
+<img src="https://americanmicronic.in/cdn/shop/files/American-Micronic-2200-watts-imported-vacuum-cleaner-1.jpg?v=1695637646&width=2048"> 
+<h3>Vacuum Cleaner</h3> 
+<p>₹6,000</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+</div> 
+ 
+ 
+<!-- BOOKS --> 
+ 
+<div id="books" class="product-grid"> 
+ 
+<div class="card"> 
+<img 
+src="https://www.jaicobooks.com/wp-content/uploads/2022/12/j-2686-heidi-johanna-spyri.jpg"> 
+<h3>Heidi</h3> 
+<p>₹300</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+<div class="card"> 
+<img src="https://m.media-amazon.com/images/I/81eB+7+CkUL._SL1500_.jpg"> 
+<h3>Story Book</h3> 
+<p>₹250</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+<div class="card"> 
+<img src="https://cdn2.penguin.com.au/covers/original/9780241377093.jpg"> 
+<h3>The Little Prince</h3> 
+<p>₹350</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+<div class="card"> 
+<img src="https://m.media-amazon.com/images/I/617cHre8YcL._AC_UF1000,1000_QL80_.jpg"> 
+<h3>Mind Power</h3> 
+<p>₹400</p> 
+<button>Add to Cart</button> 
+</div> 
+ 
+</div> 
+ 
+</div> 
+ 
+</div> 
+ 
+<div class="footer"> 
+© 2026 Sales Mart | All Rights Reserved 
+</div> 
+ 
+</body> 
+</html>
