@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div>
+    <form>
+        Password:
+        <input type="password" id="password" placeholder="Enter password" onkeyup="checkStrength()">
+        <p id="strengthMsg"></p>
+    </form>
+</div>
+
+<script>
+function checkStrength() {
+    let pwd = document.getElementById("password").value;
+    let msg = document.getElementById("strengthMsg");
+
+    if (pwd.length < 6) {
+        msg.innerHTML = "Weak Password";
+        msg.className = "weak";
+    }
+    else if (/[A-Z]/.test(pwd) && /[0-9]/.test(pwd) && /[^A-Za-z0-9]/.test(pwd)) {
+        msg.innerHTML = "Strong Password";
+        msg.className = "strong";
+        msg.style.color = "green";
+    }
+    else {
+        msg.innerHTML = "Medium Strength";
+        msg.style.color = "orange";
+    }
+}
+</script>
+
+<style>
+.weak {
+    color: red;
+}
+.strong {
+    color: green;
+}
+</style>
+
+</body>
+</html>

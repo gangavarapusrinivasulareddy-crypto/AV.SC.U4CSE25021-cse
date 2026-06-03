@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div>
+    <form>
+        Mobile Number:
+        <input type="text" id="mobile" placeholder="Enter 10-digit number" onblur="validateMobile()">
+        <p id="msg"></p>
+    </form>
+</div>
+
+<script>
+function validateMobile() {
+    let mobile = document.getElementById("mobile").value;
+    let msg = document.getElementById("msg");
+    let pattern = /^[0-9]{10}$/;
+
+    if (!pattern.test(mobile)) {
+        msg.innerHTML = "Invalid mobile number! Must be exactly 10 digits.";
+        msg.className = "error";
+    } else {
+        msg.innerHTML = "Valid mobile number.";
+        msg.className = "success";
+    }
+}
+</script>
+
+<style>
+.error {
+    color: red;
+}
+.success {
+    color: green;
+}
+</style>
+
+</body>
+</html>

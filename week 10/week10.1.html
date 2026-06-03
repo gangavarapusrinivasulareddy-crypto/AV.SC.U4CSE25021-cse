@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort Three Numbers</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: rgb(142, 165, 42);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            background: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+            width: 80%;
+        }
+        button {
+            padding: 10px;
+            background: #ff0033;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #b30000;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h2>Sort 3 Numbers</h2>
+    <input type="number" id="n1" placeholder="Enter first number"><br>
+    <input type="number" id="n2" placeholder="Enter second number"><br>
+    <input type="number" id="n3" placeholder="Enter third number"><br><br>
+    <button onclick="sortNumbers()">Sort</button>
+</div>
+<script>
+function sortNumbers() {
+    let a = parseInt(document.getElementById("n1").value);
+    let b = parseInt(document.getElementById("n2").value);
+    let c = parseInt(document.getElementById("n3").value);
+    let max, mid, min;
+    if (a >= b && a >= c) {
+        max = a;
+    } else if (b >= a && b >= c) {
+        max = b;
+    } else {
+        max = c;
+    }
+    if (a <= b && a <= c) {
+        min = a;
+    } else if (b <= a && b <= c) {
+        min = b;
+    } else {
+        min = c;
+    }
+    mid = a + b + c - max - min;
+    alert("Sorted Order: " + max + ", " + mid + ", " + min);
+}
+</script>
+</body>
+</html>
